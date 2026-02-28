@@ -86,17 +86,19 @@ const Index = () => {
 
       {/* Explanation - Coral */}
       <section className="section-coral py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-            Você acha que sua letra não tem mais jeito? <span className="text-secondary underline decoration-4">ERRADO!</span>
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-8">
+            Sua letra não tem mais jeito? <span className="text-secondary underline decoration-4">ERRADO!</span>
           </h2>
-          <p className="text-base md:text-lg opacity-95 leading-relaxed">
-            Treinar caligrafia da forma correta com uma apostila focada em coordenação motora, movimentos corretos, firmeza de traço e construção das letras é o que realmente transforma a escrita. Em vez de apenas "copiar letras", você reeduca a mão, o cérebro e o controle do movimento.
-          </p>
-          <p className="text-base md:text-lg opacity-95 leading-relaxed mt-4">
-            O resultado não é só uma letra mais bonita, é <strong>mais confiança ao escrever</strong>, menos cansaço e uma escrita clara em qualquer situação.
-          </p>
-          <p className="mt-4 text-base md:text-lg font-bold">O método é eficiente tanto para adultos quanto para crianças em fase de alfabetização.</p>
+          <div className="flex flex-col gap-4 text-left">
+            {[
+              "✍️ Reeduca sua mão, cérebro e controle do movimento",
+              "💪 Mais confiança e menos cansaço ao escrever",
+              "🎯 Funciona para adultos e crianças",
+            ].map((item, i) => (
+              <p key={i} className="text-lg md:text-xl font-bold opacity-95">{item}</p>
+            ))}
+          </div>
         </div>
       </section>
 
