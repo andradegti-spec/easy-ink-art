@@ -54,8 +54,10 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
             <span className="text-xs font-bold text-secondary uppercase tracking-wide mb-2 mt-3">Premium</span>
             <ul className="text-left space-y-1.5 mb-3 w-full">
               {[
+                "Todos os bônus inclusos",
                 "Atualizações gratuitas",
                 "Acesso vitalício",
+                "Receba no WhatsApp na hora",
               ].map((f, i) => (
                 <li key={i} className="flex items-start gap-1.5 text-xs">
                   <Check className="w-3.5 h-3.5 mt-0.5 text-secondary flex-shrink-0" />
