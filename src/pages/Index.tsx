@@ -90,8 +90,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Before/After - Light Yellow */}
-      <section className="section-light py-16 px-4">
+      {/* Before/After - Dark */}
+      <section className="section-dark py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">
             Esse é o resultado que você terá em apenas{" "}
