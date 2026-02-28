@@ -32,6 +32,19 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
           {/* BÁSICO */}
           <div className="rounded-xl border-2 border-border bg-background p-4 flex flex-col items-center text-center">
             <span className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-2">Básico</span>
+            <ul className="text-left space-y-1.5 mb-3 w-full">
+              {[
+                "Combo +300 atividades caligrafia",
+                "Módulo de coordenação motora",
+                "Módulo de alfabeto cursivo",
+                "Módulo de lettering",
+              ].map((f, i) => (
+                <li key={i} className="flex items-start gap-1.5 text-xs">
+                  <Check className="w-3.5 h-3.5 mt-0.5 text-green-500 flex-shrink-0" />
+                  <span className="text-foreground">{f}</span>
+                </li>
+              ))}
+            </ul>
             <div className="mt-auto w-full">
               <p className="text-2xl font-extrabold text-foreground mb-1">R$9,90</p>
               <a
@@ -54,6 +67,7 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
             <span className="text-xs font-bold text-secondary uppercase tracking-wide mb-2 mt-3">Premium</span>
             <ul className="text-left space-y-1.5 mb-3 w-full">
               {[
+                "✅ Tudo do Básico incluso",
                 "Todos os bônus inclusos",
                 "Atualizações gratuitas",
                 "Acesso vitalício",
