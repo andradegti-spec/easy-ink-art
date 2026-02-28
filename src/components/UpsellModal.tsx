@@ -50,7 +50,7 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("click_basic_upsell")}
-              className="w-full mt-auto py-2.5 rounded-xl text-sm font-bold border-2 border-border text-foreground bg-background hover:bg-muted transition text-center block"
+              className="cta-button-green w-full text-center text-sm py-2.5 block"
             >
               QUERO O BÁSICO
             </a>
@@ -76,7 +76,8 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
               ))}
             </ul>
             <p className="text-muted-foreground line-through text-[10px]">R$27,90</p>
-            <p className="text-2xl font-extrabold text-primary mb-1">R$19,90</p>
+            <p className="text-2xl font-extrabold text-primary mb-0.5">R$19,90</p>
+            <p className="text-[10px] font-bold text-secondary uppercase tracking-wide mb-1">⚡ Oferta Única</p>
             <a
               href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2"
               target="_blank"
