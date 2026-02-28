@@ -1,4 +1,5 @@
 import { X, Check, Sparkles } from "lucide-react";
+import { trackEvent } from "@/lib/trackEvent";
 
 interface UpsellModalProps {
   isOpen: boolean;
@@ -48,7 +49,7 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
           Receba instantaneamente via WhatsApp os dados de acesso para baixar seus arquivos!
         </p>
 
-        <a href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2" target="_blank" rel="noopener noreferrer" className="cta-button inline-block w-full text-center text-base py-3 animate-pulse-scale mb-2">
+        <a href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("click_upsell")} className="cta-button inline-block w-full text-center text-base py-3 animate-pulse-scale mb-2">
           QUERO O PREMIUM POR R$19,90
         </a>
         <a href="https://pay.lowify.com.br/checkout?product_id=7Yupdq" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-foreground underline transition">
