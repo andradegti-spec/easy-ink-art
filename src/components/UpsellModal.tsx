@@ -48,12 +48,12 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
           Receba instantaneamente via WhatsApp os dados de acesso para baixar seus arquivos!
         </p>
 
-        <a href="#" className="cta-button inline-block w-full text-center text-base py-3 animate-pulse-scale mb-2">
+        <a href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2" target="_blank" rel="noopener noreferrer" className="cta-button inline-block w-full text-center text-base py-3 animate-pulse-scale mb-2">
           QUERO O PREMIUM POR R$19,90
         </a>
-        <button onClick={onClose} className="text-xs text-muted-foreground hover:text-foreground underline transition">
+        <a href="https://pay.lowify.com.br/checkout?product_id=7Yupdq" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-foreground underline transition">
           Não, obrigado. Continuar com o básico.
-        </button>
+        </a>
       </div>
     </div>
   );
