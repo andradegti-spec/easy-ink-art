@@ -15,6 +15,10 @@ import exercicio2 from "@/assets/exercicio-2.png";
 import exercicio3 from "@/assets/exercicio-3.png";
 import exercicio4 from "@/assets/exercicio-4.png";
 import exercicio5 from "@/assets/exercicio-5.png";
+import provaSocial1 from "@/assets/prova-social-1.png";
+import provaSocial2 from "@/assets/prova-social-2.png";
+import provaSocial3 from "@/assets/prova-social-3.png";
+import provaSocial4 from "@/assets/prova-social-4.png";
 
 const Index = () => {
   return (
@@ -157,20 +161,18 @@ const Index = () => {
 
       {/* Testimonials - Green */}
       <section className="section-green py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-extrabold mb-2 text-foreground">Realmente Funciona?</h2>
           <p className="text-muted-foreground text-lg mb-10">Vamos deixar que alguns dos mais de <strong className="text-foreground">8.590 alunos</strong> de todo Brasil respondam...</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { name: "Maria S.", text: "Minha letra mudou completamente em 2 semanas! Incrível!" },
-              { name: "João P.", text: "Comprei para meu filho de 7 anos e ele ama os exercícios. Já melhorou muito!" },
-              { name: "Ana C.", text: "Sempre tive vergonha da minha letra. Agora escrevo com confiança!" },
-            ].map((t, i) => (
-              <div key={i} className="bg-card rounded-2xl p-6 shadow-lg text-left">
-                <div className="flex gap-1 mb-3 text-secondary text-xl">⭐⭐⭐⭐⭐</div>
-                <p className="text-foreground mb-3 italic">"{t.text}"</p>
-                <p className="font-bold text-primary text-sm">— {t.name}</p>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[provaSocial1, provaSocial2, provaSocial3, provaSocial4].map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                alt={`Depoimento de aluno ${i + 1}`}
+                className="rounded-2xl shadow-lg w-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
             ))}
           </div>
         </div>
