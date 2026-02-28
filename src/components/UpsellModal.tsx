@@ -44,16 +44,18 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
                 </li>
               ))}
             </ul>
-            <p className="text-2xl font-extrabold text-foreground mb-1">R$9,90</p>
-            <a
-              href="https://pay.lowify.com.br/checkout?product_id=7Yupdq"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("click_basic_upsell")}
-              className="cta-button-green w-full text-center text-sm py-2.5 block"
-            >
-              QUERO O BÁSICO
-            </a>
+            <div className="mt-auto w-full">
+              <p className="text-2xl font-extrabold text-foreground mb-1">R$9,90</p>
+              <a
+                href="https://pay.lowify.com.br/checkout?product_id=7Yupdq"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("click_basic_upsell")}
+                className="cta-button-green w-full text-center text-sm py-2.5 block"
+              >
+                QUERO O BÁSICO
+              </a>
+            </div>
           </div>
 
           {/* PREMIUM */}
@@ -75,18 +77,20 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
                 </li>
               ))}
             </ul>
-            <p className="text-muted-foreground line-through text-[10px]">R$27,90</p>
-            <p className="text-2xl font-extrabold text-primary mb-0.5">R$19,90</p>
-            <p className="text-[10px] font-bold text-secondary uppercase tracking-wide mb-1">⚡ Oferta Única</p>
-            <a
-              href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("click_upsell")}
-              className="cta-button w-full text-center text-sm py-2.5 animate-pulse-scale block"
-            >
-              QUERO O PREMIUM
-            </a>
+            <div className="mt-auto w-full">
+              <p className="text-muted-foreground line-through text-[10px]">R$27,90</p>
+              <p className="text-2xl font-extrabold text-primary mb-0.5">R$19,90</p>
+              <p className="text-[10px] font-bold text-secondary uppercase tracking-wide mb-1">⚡ Oferta Única</p>
+              <a
+                href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("click_upsell")}
+                className="cta-button w-full text-center text-sm py-2.5 animate-pulse-scale block"
+              >
+                QUERO O PREMIUM
+              </a>
+            </div>
           </div>
         </div>
 
