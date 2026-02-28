@@ -93,17 +93,17 @@ const Index = () => {
       {/* Before/After - Dark */}
       <section className="section-dark py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-2">
             Esse é o resultado que você terá em apenas{" "}
             <span className="text-primary underline decoration-4">14 DIAS</span>:
           </h2>
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div>
-              <p className="text-xl font-bold mb-3 text-foreground">ANTES</p>
+              <p className="text-xl font-bold mb-3">ANTES</p>
               <img src={antesImg} alt="Caligrafia antes do método" className="rounded-xl shadow-lg w-full object-cover max-h-80" />
             </div>
             <div>
-              <p className="text-xl font-bold mb-3 text-foreground">DEPOIS</p>
+              <p className="text-xl font-bold mb-3">DEPOIS</p>
               <img src={depoisImg} alt="Caligrafia depois do método" className="rounded-xl shadow-lg w-full object-cover max-h-80" />
             </div>
           </div>
@@ -113,9 +113,9 @@ const Index = () => {
               { icon: Zap, text: "Acesso Imediato: Baixe, imprima e comece a praticar agora!" },
               { icon: CheckCircle, text: "Método testado e aprovado" },
             ].map((item, i) => (
-              <div key={i} className="bg-card rounded-2xl px-6 py-5 shadow-xl border-l-4 border-primary flex items-center gap-4 hover:scale-[1.02] transition-transform">
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-5 shadow-xl border-l-4 border-primary flex items-center gap-4 hover:scale-[1.02] transition-transform">
                 <item.icon className="w-8 h-8 text-primary flex-shrink-0" />
-                <span className="text-base md:text-lg font-extrabold text-foreground">{item.text}</span>
+                <span className="text-base md:text-lg font-extrabold">{item.text}</span>
               </div>
             ))}
           </div>
