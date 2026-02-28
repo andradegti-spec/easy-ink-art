@@ -25,6 +25,7 @@ import provaSocial2 from "@/assets/prova-social-2.png";
 import provaSocial3 from "@/assets/prova-social-3.png";
 import provaSocial4 from "@/assets/prova-social-4.png";
 import compradoresImg from "@/assets/compradores.png";
+import expertImg from "@/assets/expert.png";
 
 const Index = () => {
   const [showUpsell, setShowUpsell] = useState(false);
@@ -103,6 +104,27 @@ const Index = () => {
                 <span className="text-base md:text-lg font-extrabold text-foreground">{item.text}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Expert */}
+      <section className="section-purple py-16 px-4">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+          <img
+            src={expertImg}
+            alt="Professora Ana Beatriz - Especialista em Caligrafia"
+            className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover shadow-2xl border-4 border-primary flex-shrink-0"
+          />
+          <div className="text-center md:text-left">
+            <p className="text-sm font-bold text-primary uppercase tracking-widest mb-1">Desenvolvido por</p>
+            <h2 className="text-2xl md:text-4xl font-extrabold text-foreground mb-3">
+              Profª Ana Beatriz
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              Pedagoga e especialista em caligrafia com mais de <strong className="text-foreground">12 anos de experiência</strong> no ensino da escrita. 
+              Já ajudou mais de <strong className="text-foreground">8.500 alunos</strong> a transformarem sua letra usando o método exclusivo que ela desenvolveu.
+            </p>
           </div>
         </div>
       </section>
