@@ -193,6 +193,17 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Guarantee - Coral (antes das ofertas) */}
+      <section className="section-coral py-12 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="w-16 h-16 mx-auto mb-4 bg-secondary rounded-full flex items-center justify-center">
+            <Shield className="w-8 h-8 text-secondary-foreground" />
+          </div>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-3">RISCO ZERO</h2>
+          <p className="text-lg font-bold opacity-95">Garantia incondicional de 7 dias. Não gostou? Devolvemos seu dinheiro. Simples assim.</p>
+        </div>
+      </section>
+
       {/* Pricing - Light */}
       <section id="pricing" className="section-light py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -205,19 +216,6 @@ const Index = () => {
               <p className="text-center mt-3 text-sm text-muted-foreground">↑ Escolha mais popular</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Guarantee - Coral */}
-      <section className="section-coral py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="w-20 h-20 mx-auto mb-6 bg-secondary rounded-full flex items-center justify-center">
-            <Shield className="w-10 h-10 text-secondary-foreground" />
-          </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Investimento com RISCO ZERO.</h2>
-          <p className="text-base md:text-lg opacity-95 leading-relaxed">
-            Nossos materiais têm uma garantia incondicional de <strong>7 dias</strong>. Você pode ter acesso a todo o conteúdo e aos bônus. Se por qualquer motivo não ficar satisfeito, basta nos enviar um e-mail e solicitar o reembolso. Você receberá cada centavo de volta.
-          </p>
         </div>
       </section>
 
