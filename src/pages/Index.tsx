@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Lock, Award, Mail, Printer, Clock } from "lucide-react";
+import { Shield, Lock, Award, Mail, Printer, Clock, Target, Zap, CheckCircle } from "lucide-react";
 
 import antesImg from "@/assets/antes.png";
 import depoisImg from "@/assets/depois.png";
@@ -71,12 +71,12 @@ const Index = () => {
           </div>
           <div className="mt-10 flex flex-col gap-4 justify-center max-w-lg mx-auto">
             {[
-              { icon: "🎯", text: "+300 exercícios para melhorar sua escrita" },
-              { icon: "⚡", text: "Acesso Imediato: Baixe, imprima e comece a praticar agora!" },
-              { icon: "✅", text: "Método testado e aprovado" },
+              { icon: Target, text: "+300 exercícios para melhorar sua escrita" },
+              { icon: Zap, text: "Acesso Imediato: Baixe, imprima e comece a praticar agora!" },
+              { icon: CheckCircle, text: "Método testado e aprovado" },
             ].map((item, i) => (
               <div key={i} className="bg-card rounded-2xl px-6 py-5 shadow-xl border-l-4 border-primary flex items-center gap-4 hover:scale-[1.02] transition-transform">
-                <span className="text-3xl">{item.icon}</span>
+                <item.icon className="w-8 h-8 text-primary flex-shrink-0" />
                 <span className="text-base md:text-lg font-extrabold text-foreground">{item.text}</span>
               </div>
             ))}
