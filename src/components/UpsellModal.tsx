@@ -32,18 +32,6 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
           {/* BÁSICO */}
           <div className="rounded-xl border-2 border-border bg-background p-4 flex flex-col items-center text-center">
             <span className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-2">Básico</span>
-            <ul className="text-left space-y-1.5 mb-3 w-full">
-              {[
-                "100 exercícios",
-                "Alfabeto cursivo",
-                "Acesso imediato",
-              ].map((f, i) => (
-                <li key={i} className="flex items-start gap-1.5 text-xs">
-                  <Check className="w-3.5 h-3.5 mt-0.5 text-muted-foreground flex-shrink-0" />
-                  <span className="text-foreground">{f}</span>
-                </li>
-              ))}
-            </ul>
             <div className="mt-auto w-full">
               <p className="text-2xl font-extrabold text-foreground mb-1">R$9,90</p>
               <a
@@ -66,9 +54,7 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
             <span className="text-xs font-bold text-secondary uppercase tracking-wide mb-2 mt-3">Premium</span>
             <ul className="text-left space-y-1.5 mb-3 w-full">
               {[
-                "+250 exercícios bônus",
-                "Mega pack infantil",
-                "Todos os alfabetos",
+                "Atualizações gratuitas",
                 "Acesso vitalício",
               ].map((f, i) => (
                 <li key={i} className="flex items-start gap-1.5 text-xs">
@@ -80,7 +66,7 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
             <div className="mt-auto w-full">
               <p className="text-muted-foreground line-through text-[10px]">R$27,90</p>
               <p className="text-2xl font-extrabold text-primary mb-0.5">R$19,90</p>
-              <p className="text-[10px] font-bold text-secondary uppercase tracking-wide mb-1">⚡ Oferta Única</p>
+              <p className="text-[10px] font-bold text-secondary uppercase tracking-wide mb-1">⚡ Oferta Única — 30% OFF</p>
               <a
                 href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2"
                 target="_blank"
