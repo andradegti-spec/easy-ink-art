@@ -31,6 +31,7 @@ import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.png";
 import avatar5 from "@/assets/avatar-5.png";
+import logoClubeImg from "@/assets/logo-clube.png";
 
 const Index = () => {
   const [showUpsell, setShowUpsell] = useState(false);
@@ -61,6 +62,7 @@ const Index = () => {
       {/* Hero - Preto e Dourado */}
       <section className="section-hero py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <img src={logoClubeImg} alt="Clube da Caligrafia" className="h-16 md:h-20 mx-auto mb-6" />
           <p className="text-xs md:text-sm uppercase tracking-widest mb-6 opacity-50">
             Oferta válida somente hoje
           </p>
@@ -340,6 +342,7 @@ const Index = () => {
             </a>
           </div>
 
+          <img src={logoClubeImg} alt="Clube da Caligrafia" className="h-12 mx-auto mb-4" />
           <p className="text-sm opacity-50 text-center">Todos os direitos reservados a Caligrafia Fácil LTDA • 2026</p>
         </div>
       </footer>
