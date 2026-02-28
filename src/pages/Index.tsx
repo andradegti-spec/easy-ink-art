@@ -37,14 +37,13 @@ const Index = () => {
           </p>
           <CountdownTimer variant="gold" />
 
-          <h1 className="text-3xl md:text-5xl font-extrabold mt-10 mb-5 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold mt-10 mb-5 leading-tight italic">
             CONQUISTE UMA LETRA BONITA, LEGÍVEL E PROFISSIONAL EM{" "}
-            <span className="gold-text">15 MINUTOS POR DIA!</span>
+            <span className="gold-text underline decoration-4">15 MINUTOS POR DIA!</span>
           </h1>
 
-          <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto mb-10">
-            Se você quer ter uma letra bonita e redondinha, escrever com mais agilidade e traços
-            firmes, o <strong className="gold-text">Método Caligrafia Fácil</strong> é pra você! Serve para adultos e crianças.
+          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">
+            Se você quer ter uma <strong>letra bonita</strong> e <strong>redondinha</strong>, escrever com mais <strong>agilidade</strong> e <strong>traços firmes</strong>, o <strong className="gold-text">Método Caligrafia Fácil</strong> é pra você! Serve para <strong>adultos</strong> e <strong>crianças</strong>.
           </p>
 
           <a href="#pricing" className="cta-button-gold inline-block animate-pulse-scale">
@@ -56,9 +55,9 @@ const Index = () => {
       {/* Before/After - Light Yellow */}
       <section className="section-light py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-2 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">
             Esse é o resultado que você terá em apenas{" "}
-            <span className="text-primary">14 DIAS</span>:
+            <span className="text-primary underline decoration-4">14 DIAS</span>:
           </h2>
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div>
@@ -84,8 +83,8 @@ const Index = () => {
       {/* Explanation - Coral */}
       <section className="section-coral py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-6">
-            Você acha que sua letra não tem mais jeito? <span className="text-secondary">ERRADO!</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
+            Você acha que sua letra não tem mais jeito? <span className="text-secondary underline decoration-4">ERRADO!</span>
           </h2>
           <p className="text-base md:text-lg opacity-95 leading-relaxed">
             Treinar caligrafia da forma correta com uma apostila focada em coordenação motora, movimentos corretos, firmeza de traço e construção das letras é o que realmente transforma a escrita. Em vez de apenas "copiar letras", você reeduca a mão, o cérebro e o controle do movimento.
@@ -100,8 +99,8 @@ const Index = () => {
       {/* How it Works - Teal */}
       <section className="section-teal py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-12 text-foreground">
-            Como funciona o <span className="text-primary">Método Caligrafia Fácil</span>?
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-12 text-foreground">
+            Como funciona o <span className="text-primary underline decoration-4">Método Caligrafia Fácil</span>?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -124,7 +123,7 @@ const Index = () => {
       {/* Video - Dark */}
       <section className="section-dark py-16 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-8">Veja mais sobre nosso método:</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-8">Veja mais sobre nosso método:</h2>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <div dangerouslySetInnerHTML={{ __html: `<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/bxe9wvxzvq.js" async type="module"></script><style>wistia-player[media-id='bxe9wvxzvq']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/bxe9wvxzvq/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style><wistia-player media-id="bxe9wvxzvq" aspect="0.5625"></wistia-player>` }} />
           </div>
@@ -135,7 +134,7 @@ const Index = () => {
       {/* Activities - Orange - Carrossel */}
       <section className="section-orange py-16 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-4 text-foreground">Veja algumas das atividades que você vai receber:</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-foreground">Veja algumas das atividades que você vai receber:</h2>
           <p className="text-muted-foreground mb-10 text-lg">Ao adquirir você vai receber <strong className="text-foreground">mais de 300 atividades exclusivas</strong> para transformar sua escrita:</p>
           <ExerciseCarousel
             images={[
@@ -152,8 +151,8 @@ const Index = () => {
       {/* Bonus - Purple */}
       <section className="section-purple py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-2 text-foreground">E você ainda ganha</h2>
-          <p className="text-3xl md:text-4xl font-extrabold text-accent mb-10">+2 Bônus Exclusivos!</p>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">E você ainda ganha</h2>
+          <p className="text-3xl md:text-5xl font-extrabold text-accent mb-10">+2 Bônus Exclusivos!</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-card rounded-2xl p-8 shadow-lg text-left">
               <span className="text-primary font-extrabold text-sm">#Bônus 1</span>
@@ -172,7 +171,7 @@ const Index = () => {
       {/* Testimonials - Green */}
       <section className="section-green py-16 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-2 text-foreground">Realmente Funciona?</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">Realmente Funciona?</h2>
           <p className="text-muted-foreground text-lg mb-10">Vamos deixar que alguns dos mais de <strong className="text-foreground">8.590 alunos</strong> de todo Brasil respondam...</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[provaSocial1, provaSocial2, provaSocial3, provaSocial4].map((img, i) => (
@@ -209,7 +208,7 @@ const Index = () => {
           <div className="w-20 h-20 mx-auto mb-6 bg-secondary rounded-full flex items-center justify-center">
             <Shield className="w-10 h-10 text-secondary-foreground" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Investimento com RISCO ZERO.</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Investimento com RISCO ZERO.</h2>
           <p className="text-base md:text-lg opacity-95 leading-relaxed">
             Nossos materiais têm uma garantia incondicional de <strong>7 dias</strong>. Você pode ter acesso a todo o conteúdo e aos bônus. Se por qualquer motivo não ficar satisfeito, basta nos enviar um e-mail e solicitar o reembolso. Você receberá cada centavo de volta.
           </p>
@@ -219,7 +218,7 @@ const Index = () => {
       {/* FAQ - Teal */}
       <section className="section-teal py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-8 text-center text-foreground">Saiba mais sobre nossas atividades</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-8 text-center text-foreground">Saiba mais sobre nossas atividades</h2>
           <Accordion type="single" collapsible className="space-y-3">
             {[
               { q: "Como vou receber o material de caligrafia?", a: "Logo após a confirmação do pagamento, você receberá o material completo em PDF no seu e-mail. Basta baixar e imprimir!" },
