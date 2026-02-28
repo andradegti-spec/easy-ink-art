@@ -249,6 +249,17 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <div className="mb-4">
+            <p className="text-sm opacity-70 mb-2">Suporte:</p>
+            <a
+              href="https://wa.me/5566984511874"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-bold opacity-90 hover:opacity-100 transition"
+            >
+              📱 WhatsApp: (66) 98451-1874
+            </a>
+          </div>
           <p className="text-sm opacity-50">Todos os direitos reservados a Caligrafia Fácil LTDA • 2026</p>
         </div>
       </footer>
