@@ -114,9 +114,9 @@ const Index = () => {
               { icon: Zap, text: "Acesso Imediato: Baixe, imprima e comece a praticar agora!" },
               { icon: CheckCircle, text: "Método testado e aprovado" },
             ].map((item, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-5 shadow-xl border-l-4 border-primary flex items-center gap-4 hover:scale-[1.02] transition-transform">
+              <div key={i} className="bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-5 shadow-xl border border-primary/50 flex items-center gap-4 hover:scale-[1.02] transition-transform">
                 <item.icon className="w-8 h-8 text-primary flex-shrink-0" />
-                <span className="text-base md:text-lg font-extrabold">{item.text}</span>
+                <span className="text-base md:text-lg font-extrabold text-white">{item.text}</span>
               </div>
             ))}
           </div>
