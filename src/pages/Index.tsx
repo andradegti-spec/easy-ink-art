@@ -37,7 +37,7 @@ const Index = () => {
           </p>
           <CountdownTimer variant="gold" />
 
-          <h1 className="text-4xl md:text-6xl font-extrabold mt-10 mb-5 leading-tight italic">
+          <h1 className="text-4xl md:text-6xl font-extrabold mt-10 mb-5 leading-tight">
             CONQUISTE UMA LETRA BONITA, LEGÍVEL E PROFISSIONAL EM{" "}
             <span className="gold-text underline decoration-4">15 MINUTOS POR DIA!</span>
           </h1>
