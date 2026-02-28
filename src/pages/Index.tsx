@@ -211,13 +211,12 @@ const Index = () => {
           <p className="text-muted-foreground mb-10 text-lg">Ao adquirir você vai receber <strong className="text-foreground">mais de 300 atividades exclusivas</strong> para transformar sua escrita:</p>
           <ExerciseCarousel
             images={[
-              { src: exercicio1, title: "PRATICANDO O ALFABETO" },
-              { src: exercicio2, title: "COORDENAÇÃO" },
-              { src: exercicio3, title: "EXERCÍCIOS BÁSICOS" },
-              { src: exercicio4, title: "EXERCÍCIOS BÁSICOS" },
-              { src: exercicio5, title: "EXERCÍCIOS BÁSICOS" },
+              { src: exercicio1, title: "" },
+              { src: exercicio2, title: "" },
+              { src: exercicio3, title: "" },
             ]}
           />
+          <p className="text-2xl md:text-3xl font-extrabold text-foreground mt-10">...tudo isso e muito mais! 🚀</p>
         </div>
       </section>
 
