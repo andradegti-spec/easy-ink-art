@@ -66,7 +66,7 @@ const Index = () => {
           </p>
 
           <h1 className="text-4xl md:text-6xl font-extrabold mb-5 leading-tight">
-            CONQUISTE UMA <span className="gold-text">LETRA BONITA</span>, <span className="gold-text">LEGÍVEL</span> E <span className="gold-text">PROFISSIONAL</span> EM{" "}
+            CONQUISTE UMA LETRA BONITA, LEGÍVEL E PROFISSIONAL EM{" "}
             <span className="gold-text underline decoration-4">15 MINUTOS POR DIA!</span>
           </h1>
 
