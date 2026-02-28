@@ -9,7 +9,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Lock, Award, Mail, Printer, Clock, Target, Zap, CheckCircle } from "lucide-react";
+import { Shield, Lock, Award, Mail, Printer, Clock, Target, Zap, CheckCircle, PenTool, Brain, Users, MessageCircle } from "lucide-react";
+import PurchaseNotification from "@/components/PurchaseNotification";
+import ViewerCount from "@/components/ViewerCount";
 
 import antesImg from "@/assets/antes.png";
 import depoisImg from "@/assets/depois.png";
@@ -29,6 +31,7 @@ const Index = () => {
   return (
     <div className="w-full overflow-x-hidden">
       <UpsellModal isOpen={showUpsell} onClose={() => setShowUpsell(false)} />
+      <PurchaseNotification />
       {/* Hero - Preto e Dourado */}
       <section className="section-hero py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -90,13 +93,18 @@ const Index = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold mb-8">
             Sua letra não tem mais jeito? <span className="text-secondary underline decoration-4">ERRADO!</span>
           </h2>
-          <div className="flex flex-col gap-4 text-left">
+          <div className="flex flex-col gap-5 max-w-md mx-auto">
             {[
-              "✍️ Reeduca sua mão, cérebro e controle do movimento",
-              "💪 Mais confiança e menos cansaço ao escrever",
-              "🎯 Funciona para adultos e crianças",
+              { icon: PenTool, text: "Reeduca sua mão e controle do movimento" },
+              { icon: Brain, text: "Mais confiança e menos cansaço ao escrever" },
+              { icon: Users, text: "Funciona para adultos e crianças" },
             ].map((item, i) => (
-              <p key={i} className="text-lg md:text-xl font-bold opacity-95">{item}</p>
+              <div key={i} className="flex items-center gap-4 bg-card/10 backdrop-blur-sm rounded-xl px-5 py-4">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-secondary-foreground" />
+                </div>
+                <span className="text-lg md:text-xl font-bold">{item.text}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -133,7 +141,10 @@ const Index = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <div dangerouslySetInnerHTML={{ __html: `<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/bxe9wvxzvq.js" async type="module"></script><style>wistia-player[media-id='bxe9wvxzvq']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/bxe9wvxzvq/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style><wistia-player media-id="bxe9wvxzvq" aspect="0.5625"></wistia-player>` }} />
           </div>
-          <a href="#pricing" className="cta-button inline-block mt-10 animate-pulse-scale">QUERO TRANSFORMAR MINHA LETRA AGORA!</a>
+          <ViewerCount />
+          <div className="mt-8">
+            <a href="#pricing" className="cta-button inline-block animate-pulse-scale">QUERO TRANSFORMAR MINHA LETRA AGORA!</a>
+          </div>
         </div>
       </section>
 
@@ -252,17 +263,15 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <div className="mb-4">
-            <p className="text-sm opacity-70 mb-2">Suporte:</p>
-            <a
-              href="https://wa.me/5566984511874"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-bold opacity-90 hover:opacity-100 transition"
-            >
-              📱 WhatsApp: (66) 98451-1874
-            </a>
-          </div>
+          <a
+            href="https://wa.me/5566984511874"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-primary px-6 py-3 rounded-full text-primary-foreground font-bold text-base hover:scale-105 transition-transform mb-6"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Suporte via WhatsApp: (66) 98451-1874
+          </a>
           <p className="text-sm opacity-50">Todos os direitos reservados a Caligrafia Fácil LTDA • 2026</p>
         </div>
       </footer>
