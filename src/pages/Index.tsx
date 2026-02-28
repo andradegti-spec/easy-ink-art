@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import PricingCard from "@/components/PricingCard";
 import UpsellModal from "@/components/UpsellModal";
@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Lock, Award, Mail, Printer, Clock, Target, Zap, CheckCircle, PenTool, Brain, Users, MessageCircle } from "lucide-react";
+import { Shield, Lock, Award, Mail, Printer, Clock, Target, Zap, CheckCircle, PenTool, Brain, Users, MessageCircle, Phone } from "lucide-react";
 import PurchaseNotification from "@/components/PurchaseNotification";
 import ViewerCount from "@/components/ViewerCount";
 
@@ -24,9 +24,29 @@ import provaSocial1 from "@/assets/prova-social-1.png";
 import provaSocial2 from "@/assets/prova-social-2.png";
 import provaSocial3 from "@/assets/prova-social-3.png";
 import provaSocial4 from "@/assets/prova-social-4.png";
+import compradoresImg from "@/assets/compradores.png";
 
 const Index = () => {
   const [showUpsell, setShowUpsell] = useState(false);
+
+  useEffect(() => {
+    // Load Wistia scripts
+    const s1 = document.createElement("script");
+    s1.src = "https://fast.wistia.com/player.js";
+    s1.async = true;
+    document.head.appendChild(s1);
+
+    const s2 = document.createElement("script");
+    s2.src = "https://fast.wistia.com/embed/bxe9wvxzvq.js";
+    s2.async = true;
+    s2.type = "module";
+    document.head.appendChild(s2);
+
+    return () => {
+      document.head.removeChild(s1);
+      document.head.removeChild(s2);
+    };
+  }, []);
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -64,11 +84,11 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div>
-              <p className="text-xl font-bold mb-3 text-foreground">ANTES 😩</p>
+              <p className="text-xl font-bold mb-3 text-foreground">ANTES</p>
               <img src={antesImg} alt="Caligrafia antes do método" className="rounded-xl shadow-lg w-full object-cover max-h-80" />
             </div>
             <div>
-              <p className="text-xl font-bold mb-3 text-foreground">DEPOIS 😁</p>
+              <p className="text-xl font-bold mb-3 text-foreground">DEPOIS</p>
               <img src={depoisImg} alt="Caligrafia depois do método" className="rounded-xl shadow-lg w-full object-cover max-h-80" />
             </div>
           </div>
@@ -139,7 +159,7 @@ const Index = () => {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-8">Veja mais sobre nosso método:</h2>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <div dangerouslySetInnerHTML={{ __html: `<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/bxe9wvxzvq.js" async type="module"></script><style>wistia-player[media-id='bxe9wvxzvq']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/bxe9wvxzvq/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style><wistia-player media-id="bxe9wvxzvq" aspect="0.5625"></wistia-player>` }} />
+            <div dangerouslySetInnerHTML={{ __html: `<style>wistia-player[media-id='bxe9wvxzvq']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/bxe9wvxzvq/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style><wistia-player media-id="bxe9wvxzvq" aspect="0.5625"></wistia-player>` }} />
           </div>
           <ViewerCount />
           <div className="mt-8">
@@ -189,7 +209,13 @@ const Index = () => {
       <section className="section-green py-16 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">Realmente Funciona?</h2>
-          <p className="text-muted-foreground text-lg mb-10">Vamos deixar que alguns dos mais de <strong className="text-foreground">8.590 alunos</strong> de todo Brasil respondam...</p>
+          <p className="text-muted-foreground text-lg mb-4">Vamos deixar que alguns dos mais de <strong className="text-foreground">8.590 alunos</strong> de todo Brasil respondam...</p>
+          
+          {/* Buyer avatars */}
+          <div className="flex justify-center mb-8">
+            <img src={compradoresImg} alt="Compradores que aprovaram o método" className="max-w-xs md:max-w-sm" />
+          </div>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[provaSocial1, provaSocial2, provaSocial3, provaSocial4].map((img, i) => (
               <img
@@ -253,9 +279,9 @@ const Index = () => {
       </section>
 
       {/* Footer - Dark */}
-      <footer className="section-dark py-10 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center gap-8 mb-6">
+      <footer className="section-dark py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex justify-center gap-8 mb-8">
             {[{ icon: Shield, label: "Site Seguro" }, { icon: Lock, label: "Compra Protegida" }, { icon: Award, label: "Certificado de Segurança" }].map((badge, i) => (
               <div key={i} className="flex flex-col items-center gap-2 opacity-70">
                 <badge.icon className="w-6 h-6" />
@@ -263,16 +289,23 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <a
-            href="https://wa.me/5566984511874"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-primary px-6 py-3 rounded-full text-primary-foreground font-bold text-base hover:scale-105 transition-transform mb-6"
-          >
-            <MessageCircle className="w-5 h-5" />
-            Suporte via WhatsApp: (66) 98451-1874
-          </a>
-          <p className="text-sm opacity-50">Todos os direitos reservados a Caligrafia Fácil LTDA • 2026</p>
+
+          {/* Suporte destacado */}
+          <div className="bg-card/10 backdrop-blur-sm border border-border/30 rounded-2xl p-6 md:p-8 text-center mb-8 max-w-md mx-auto">
+            <h3 className="text-lg font-extrabold mb-2">Precisa de ajuda?</h3>
+            <p className="text-sm opacity-80 mb-4">Nossa equipe está pronta para te atender!</p>
+            <a
+              href="https://wa.me/5566984511874"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 w-full bg-[hsl(145,65%,42%)] px-6 py-4 rounded-full text-white font-bold text-base hover:scale-105 transition-transform"
+            >
+              <Phone className="w-5 h-5" />
+              Suporte WhatsApp: (66) 98451-1874
+            </a>
+          </div>
+
+          <p className="text-sm opacity-50 text-center">Todos os direitos reservados a Caligrafia Fácil LTDA • 2026</p>
         </div>
       </footer>
     </div>

@@ -17,7 +17,7 @@ const ExerciseCarousel = ({ images }: ExerciseCarouselProps) => {
   }, [next]);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
+    <div className="relative w-full max-w-md md:max-w-4xl mx-auto px-2">
       <div className="overflow-hidden rounded-2xl shadow-lg">
         <div
           className="flex transition-transform duration-700 ease-in-out"
@@ -25,15 +25,15 @@ const ExerciseCarousel = ({ images }: ExerciseCarouselProps) => {
         >
           {images.map((img, i) => (
             <div key={i} className="min-w-full flex-shrink-0 relative">
-              <div className="absolute top-0 left-0 right-0 z-10 bg-foreground/70 py-3 px-4">
-                <h3 className="text-lg md:text-2xl font-extrabold text-card text-center">
+              <div className="absolute top-0 left-0 right-0 z-10 bg-foreground/70 py-2 px-3 md:py-3 md:px-4">
+                <h3 className="text-sm md:text-2xl font-extrabold text-card text-center">
                   {img.title}
                 </h3>
               </div>
               <img
                 src={img.src}
                 alt={img.title}
-                className="w-full object-contain max-h-[500px]"
+                className="w-full object-contain max-h-[350px] md:max-h-[500px]"
               />
             </div>
           ))}
@@ -46,7 +46,7 @@ const ExerciseCarousel = ({ images }: ExerciseCarouselProps) => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all ${
               i === current ? "bg-primary scale-125" : "bg-border"
             }`}
           />
