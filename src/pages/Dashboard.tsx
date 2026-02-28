@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { Eye, MousePointer, Sparkles, Crown, Trash2, RefreshCw, ArrowLeft, Lock } from "lucide-react";
+import { Eye, MousePointer, Sparkles, Crown, Trash2, RefreshCw, ArrowLeft } from "lucide-react";
 
 const COLORS = ["hsl(36,100%,55%)", "hsl(174,62%,47%)", "hsl(280,60%,55%)", "hsl(145,65%,42%)"];
 
@@ -25,20 +25,9 @@ interface EventCount {
 }
 
 const Dashboard = () => {
-  const [authenticated, setAuthenticated] = useState(false);
-  const [password, setPassword] = useState("");
   const [counts, setCounts] = useState<EventCount[]>([]);
   const [dailyData, setDailyData] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-
-  const DASHBOARD_PASS = "caligrafia2026";
-
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (password === DASHBOARD_PASS) {
-      setAuthenticated(true);
-    }
-  };
 
   const fetchData = async () => {
     setLoading(true);
@@ -91,30 +80,8 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    if (authenticated) fetchData();
-  }, [authenticated]);
-
-  if (!authenticated) {
-    return (
-      <div className="min-h-screen bg-[hsl(220,20%,10%)] flex items-center justify-center p-4">
-        <form onSubmit={handleLogin} className="bg-[hsl(220,20%,15%)] rounded-2xl p-8 shadow-2xl max-w-sm w-full text-center">
-          <Lock className="w-12 h-12 text-[hsl(36,100%,55%)] mx-auto mb-4" />
-          <h1 className="text-2xl font-extrabold text-white mb-2">Dashboard</h1>
-          <p className="text-sm text-gray-400 mb-6">Digite a senha para acessar</p>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Senha"
-            className="w-full px-4 py-3 rounded-lg bg-[hsl(220,20%,20%)] text-white border border-gray-700 focus:border-[hsl(36,100%,55%)] focus:outline-none mb-4"
-          />
-          <button type="submit" className="w-full py-3 rounded-lg bg-[hsl(36,100%,55%)] text-black font-bold hover:opacity-90 transition">
-            Entrar
-          </button>
-        </form>
-      </div>
-    );
-  }
+    fetchData();
+  }, []);
 
   const pieData = counts.filter((c) => c.count > 0).map((c) => ({
     name: EVENT_LABELS[c.event_type],
