@@ -1,5 +1,8 @@
+import { useState } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import PricingCard from "@/components/PricingCard";
+import UpsellModal from "@/components/UpsellModal";
+import ExerciseCarousel from "@/components/ExerciseCarousel";
 import {
   Accordion,
   AccordionContent,
@@ -21,8 +24,11 @@ import provaSocial3 from "@/assets/prova-social-3.png";
 import provaSocial4 from "@/assets/prova-social-4.png";
 
 const Index = () => {
+  const [showUpsell, setShowUpsell] = useState(false);
+
   return (
     <div className="w-full overflow-x-hidden">
+      <UpsellModal isOpen={showUpsell} onClose={() => setShowUpsell(false)} />
       {/* Hero - Preto e Dourado */}
       <section className="section-hero py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -126,16 +132,20 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Activities - Orange */}
+      {/* Activities - Orange - Carrossel */}
       <section className="section-orange py-16 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-extrabold mb-4 text-foreground">Veja algumas das atividades que você vai receber:</h2>
           <p className="text-muted-foreground mb-10 text-lg">Ao adquirir você vai receber <strong className="text-foreground">mais de 300 atividades exclusivas</strong> para transformar sua escrita:</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {[exercicio1, exercicio2, exercicio3, exercicio4, exercicio5].map((img, i) => (
-              <img key={i} src={img} alt={`Atividade ${i + 1}`} className="rounded-xl shadow-lg w-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-            ))}
-          </div>
+          <ExerciseCarousel
+            images={[
+              { src: exercicio1, title: "PRATICANDO O ALFABETO" },
+              { src: exercicio2, title: "COORDENAÇÃO" },
+              { src: exercicio3, title: "EXERCÍCIOS BÁSICOS" },
+              { src: exercicio4, title: "EXERCÍCIOS BÁSICOS" },
+              { src: exercicio5, title: "EXERCÍCIOS BÁSICOS" },
+            ]}
+          />
         </div>
       </section>
 
@@ -184,9 +194,9 @@ const Index = () => {
           <p className="text-sm font-bold uppercase tracking-widest text-accent mb-2">⏰ A oferta acaba em:</p>
           <CountdownTimer />
           <div className="grid md:grid-cols-2 gap-8 mt-12 items-start">
-            <PricingCard title="Pacote Básico" features={["Combo +300 atividades caligrafia", "Módulo de coordenação motora", "Módulo de alfabeto cursivo", "Módulo de lettering", "7 dias de garantia"]} oldPrice="R$97" newPrice="R$27" />
+            <PricingCard title="Pacote Básico" features={["Combo +300 atividades caligrafia", "Módulo de coordenação motora", "Módulo de alfabeto cursivo", "Módulo de lettering", "7 dias de garantia"]} oldPrice="R$97" newPrice="R$9,90" onClick={() => setShowUpsell(true)} />
             <div>
-              <PricingCard title="Pacote Premium" badge="MAIS VENDIDO 🔥" highlight features={["Tudo do pacote básico", "+250 exercícios caligrafia bônus", "Mega pack atividades infantis (+350 páginas)", "Apostila reforço para crianças", "Alfabeto letra de forma", "Alfabeto letra itálico", "Alfabeto letra medieval", "Alfabeto letra jutai côrte + vídeo", "Acesso vitalício + Atualizações mensais", "+ Bônus exclusivos!"]} oldPrice="R$137" newPrice="R$37" />
+              <PricingCard title="Pacote Premium" badge="MAIS VENDIDO 🔥" highlight features={["Tudo do pacote básico", "+250 exercícios caligrafia bônus", "Mega pack atividades infantis (+350 páginas)", "Apostila reforço para crianças", "Alfabeto letra de forma", "Alfabeto letra itálico", "Alfabeto letra medieval", "Alfabeto letra jutai côrte + vídeo", "Acesso vitalício + Atualizações mensais", "+ Bônus exclusivos!"]} oldPrice="R$137" newPrice="R$27,90" onClick={() => window.open("#", "_blank")} />
               <p className="text-center mt-3 text-sm text-muted-foreground">↑ Escolha mais popular</p>
             </div>
           </div>

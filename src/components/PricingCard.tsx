@@ -7,9 +7,11 @@ interface PricingCardProps {
   oldPrice: string;
   newPrice: string;
   highlight?: boolean;
+  onClick?: () => void;
+  subtitle?: string;
 }
 
-const PricingCard = ({ title, badge, features, oldPrice, newPrice, highlight }: PricingCardProps) => {
+const PricingCard = ({ title, badge, features, oldPrice, newPrice, highlight, onClick, subtitle }: PricingCardProps) => {
   return (
     <div
       className={`relative rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transition-transform hover:scale-[1.02] ${
@@ -23,7 +25,8 @@ const PricingCard = ({ title, badge, features, oldPrice, newPrice, highlight }: 
           <span className="badge-hot text-base px-4 py-1.5">{badge}</span>
         </div>
       )}
-      <h3 className="text-2xl font-extrabold mt-2 mb-4">{title}</h3>
+      <h3 className="text-2xl font-extrabold mt-2 mb-1">{title}</h3>
+      {subtitle && <p className="text-sm mb-4 opacity-70">{subtitle}</p>}
       <ul className="text-left space-y-2 mb-6 w-full">
         {features.map((f, i) => (
           <li key={i} className="flex items-start gap-2 text-sm md:text-base">
@@ -37,9 +40,12 @@ const PricingCard = ({ title, badge, features, oldPrice, newPrice, highlight }: 
       </div>
       <p className="text-sm mb-1 opacity-80">POR APENAS</p>
       <p className="text-5xl font-extrabold mb-6">{newPrice}</p>
-      <a href="#" className={`w-full inline-block text-center ${highlight ? "cta-button" : "cta-button-green"} animate-pulse-scale`}>
+      <button
+        onClick={onClick}
+        className={`w-full inline-block text-center cursor-pointer ${highlight ? "cta-button" : "cta-button-green"} animate-pulse-scale`}
+      >
         COMPRAR AGORA
-      </a>
+      </button>
     </div>
   );
 };
