@@ -110,12 +110,12 @@ const Index = () => {
           </div>
           <div className="mt-10 flex flex-col gap-4 justify-center max-w-lg mx-auto">
             {[
-              { icon: Target, text: "+300 exercícios para melhorar sua escrita" },
-              { icon: Zap, text: "Receba na hora pelo WhatsApp e comece a praticar agora!" },
-              { icon: CheckCircle, text: "Método testado e aprovado" },
+              { icon: Target, text: "+300 exercícios para melhorar sua escrita", color: "border-[hsl(174,62%,47%)]", iconColor: "text-[hsl(174,62%,47%)]" },
+              { icon: Zap, text: "Receba na hora pelo WhatsApp e comece a praticar agora!", color: "border-[hsl(36,100%,55%)]", iconColor: "text-[hsl(36,100%,55%)]" },
+              { icon: CheckCircle, text: "Método testado e aprovado", color: "border-[hsl(145,65%,42%)]", iconColor: "text-[hsl(145,65%,42%)]" },
             ].map((item, i) => (
-              <div key={i} className="bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-5 shadow-xl border border-primary/50 flex items-center gap-4 hover:scale-[1.02] transition-transform">
-                <item.icon className="w-8 h-8 text-primary flex-shrink-0" />
+              <div key={i} className={`bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-5 shadow-xl border ${item.color} flex items-center gap-4 hover:scale-[1.02] transition-transform`}>
+                <item.icon className={`w-8 h-8 ${item.iconColor} flex-shrink-0`} />
                 <span className="text-base md:text-lg font-extrabold text-white">{item.text}</span>
               </div>
             ))}
