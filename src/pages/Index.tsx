@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { trackEvent } from "@/lib/trackEvent";
 import CountdownTimer from "@/components/CountdownTimer";
 import PricingCard from "@/components/PricingCard";
 import UpsellModal from "@/components/UpsellModal";
@@ -39,6 +40,8 @@ const Index = () => {
   const [showUpsell, setShowUpsell] = useState(false);
 
   useEffect(() => {
+    trackEvent("page_view");
+
     // Load Wistia scripts
     const s1 = document.createElement("script");
     s1.src = "https://fast.wistia.com/player.js";
@@ -288,9 +291,9 @@ const Index = () => {
           <p className="text-sm font-bold uppercase tracking-widest text-accent mb-2">⏰ A oferta acaba em:</p>
           <CountdownTimer />
           <div className="grid md:grid-cols-2 gap-8 mt-12 items-start">
-            <PricingCard title="Pacote Básico" features={["Combo +300 atividades caligrafia", "Módulo de coordenação motora", "Módulo de alfabeto cursivo", "Módulo de lettering", "7 dias de garantia"]} oldPrice="R$97" newPrice="R$9,90" onClick={() => setShowUpsell(true)} />
+            <PricingCard title="Pacote Básico" features={["Combo +300 atividades caligrafia", "Módulo de coordenação motora", "Módulo de alfabeto cursivo", "Módulo de lettering", "7 dias de garantia"]} oldPrice="R$97" newPrice="R$9,90" onClick={() => { trackEvent("click_basic"); setShowUpsell(true); }} />
             <div>
-              <PricingCard title="Pacote Premium" badge="MAIS VENDIDO 🔥" highlight features={["Tudo do pacote básico", "+250 exercícios caligrafia bônus", "Mega pack atividades infantis (+350 páginas)", "Apostila reforço para crianças", "Alfabeto letra de forma", "Alfabeto letra itálico", "Alfabeto letra medieval", "Alfabeto letra jutai côrte + vídeo", "Acesso vitalício + Atualizações mensais", "+ Bônus exclusivos!"]} oldPrice="R$137" newPrice="R$27,90" onClick={() => window.open("https://pay.lowify.com.br/checkout?product_id=XVJzyP", "_blank")} />
+              <PricingCard title="Pacote Premium" badge="MAIS VENDIDO 🔥" highlight features={["Tudo do pacote básico", "+250 exercícios caligrafia bônus", "Mega pack atividades infantis (+350 páginas)", "Apostila reforço para crianças", "Alfabeto letra de forma", "Alfabeto letra itálico", "Alfabeto letra medieval", "Alfabeto letra jutai côrte + vídeo", "Acesso vitalício + Atualizações mensais", "+ Bônus exclusivos!"]} oldPrice="R$137" newPrice="R$27,90" onClick={() => { trackEvent("click_premium"); window.open("https://pay.lowify.com.br/checkout?product_id=XVJzyP", "_blank"); }} />
               <p className="text-center mt-3 text-sm text-muted-foreground">↑ Escolha mais popular</p>
             </div>
           </div>
