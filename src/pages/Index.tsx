@@ -76,8 +76,9 @@ const Index = () => {
           </p>
 
           <h1 className="text-4xl md:text-6xl font-extrabold mb-5 leading-tight">
-            CONQUISTE UMA LETRA BONITA, LEGÍVEL E PROFISSIONAL EM{" "}
-            <span className="gold-text underline decoration-4">15 MINUTOS POR DIA!</span>
+            TRANSFORME SUA LETRA EM{" "}
+            <span className="gold-text underline decoration-4">15 MINUTOS POR DIA</span>
+            {" "}— BONITA, LEGÍVEL E COM APARÊNCIA PROFISSIONAL
           </h1>
 
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">
