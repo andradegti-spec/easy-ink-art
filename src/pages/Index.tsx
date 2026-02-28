@@ -82,7 +82,7 @@ const Index = () => {
           </h1>
 
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">
-            Se você quer ter uma <strong>letra bonita</strong> e <strong>redondinha</strong>, escrever com mais <strong>agilidade</strong> e <strong>traços firmes</strong>, o <strong className="gold-text">Método Caligrafia Fácil</strong> é pra você! Serve para <strong>adultos</strong> e <strong>crianças</strong>.
+            Aprenda a escrever com <strong>traços firmes</strong>, mais <strong>agilidade</strong> e uma <strong>letra bonita de verdade</strong> — com um método simples que funciona para <strong>adultos</strong> e <strong>crianças</strong>.
           </p>
 
           <a href="#pricing" className="cta-button-gold inline-block animate-pulse-scale">
