@@ -61,16 +61,6 @@ const Index = () => {
       {/* Hero - Preto e Dourado */}
       <section className="section-hero py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Avatar bubbles */}
-          <div className="flex items-center justify-center gap-1 mb-6">
-            <div className="flex -space-x-3">
-              {[avatar1, avatar2, avatar3, avatar4, avatar5].map((av, i) => (
-                <img key={i} src={av} alt="" className="w-10 h-10 rounded-full border-2 border-primary object-cover" />
-              ))}
-            </div>
-            <span className="text-sm opacity-80 ml-3">+8.590 alunos aprovaram ⭐⭐⭐⭐⭐</span>
-          </div>
-
           <p className="text-xs md:text-sm uppercase tracking-widest mb-6 opacity-50">
             Oferta válida somente hoje
           </p>
@@ -81,9 +71,19 @@ const Index = () => {
             {" "}— BONITA, LEGÍVEL E COM APARÊNCIA PROFISSIONAL
           </h1>
 
-          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
             Aprenda a escrever com <strong>traços firmes</strong>, mais <strong>agilidade</strong> e uma <strong>letra bonita de verdade</strong> — com um método simples que funciona para <strong>adultos</strong> e <strong>crianças</strong>.
           </p>
+
+          {/* Avatar bubbles */}
+          <div className="flex items-center justify-center gap-1 mb-8">
+            <div className="flex -space-x-3">
+              {[avatar1, avatar2, avatar3, avatar4, avatar5].map((av, i) => (
+                <img key={i} src={av} alt="" className="w-10 h-10 rounded-full border-2 border-primary object-cover" />
+              ))}
+            </div>
+            <span className="text-sm opacity-80 ml-3">+8.590 alunos aprovaram ⭐⭐⭐⭐⭐</span>
+          </div>
 
           <a href="#pricing" className="cta-button-gold inline-block animate-pulse-scale">
             QUERO TRANSFORMAR MINHA LETRA AGORA!
