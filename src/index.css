@@ -96,52 +96,52 @@
 }
 
 @layer utilities {
-  /* Hero - Preto e Dourado */
+  /* Hero - Branco clean */
   .section-hero {
-    background: linear-gradient(160deg, hsl(270, 40%, 10%) 0%, hsl(265, 35%, 14%) 50%, hsl(275, 45%, 8%) 100%);
-    color: hsl(0, 0%, 95%);
+    background: hsl(0, 0%, 100%);
+    color: hsl(220, 20%, 18%);
   }
 
   .gold-text {
-    background: linear-gradient(135deg, hsl(43, 85%, 65%), hsl(38, 90%, 50%), hsl(43, 85%, 65%));
+    background: linear-gradient(135deg, hsl(36, 100%, 50%), hsl(28, 100%, 45%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gold-border {
-    border: 1px solid hsl(43, 50%, 30%);
+    border: 1px solid hsl(220, 15%, 88%);
   }
 
-  /* Demais seções - cores originais */
+  /* Seções alternadas - tons suaves e harmoniosos */
   .section-light {
-    background-color: hsl(45, 100%, 97%);
+    background-color: hsl(210, 20%, 97%);
   }
 
   .section-teal {
-    background-color: hsl(174, 40%, 95%);
+    background-color: hsl(0, 0%, 100%);
   }
 
   .section-orange {
-    background-color: hsl(28, 100%, 96%);
+    background-color: hsl(210, 20%, 97%);
   }
 
   .section-dark {
-    background-color: hsl(220, 20%, 14%);
+    background-color: hsl(220, 25%, 12%);
     color: hsl(0, 0%, 95%);
   }
 
   .section-coral {
-    background: linear-gradient(135deg, hsl(340, 82%, 55%), hsl(350, 80%, 48%));
+    background: linear-gradient(135deg, hsl(145, 65%, 42%), hsl(150, 70%, 35%));
     color: hsl(0, 0%, 100%);
   }
 
   .section-green {
-    background-color: hsl(160, 50%, 95%);
+    background-color: hsl(0, 0%, 100%);
   }
 
   .section-purple {
-    background-color: hsl(260, 40%, 96%);
+    background-color: hsl(210, 20%, 97%);
   }
 
   .cta-button {
