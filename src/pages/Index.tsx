@@ -111,7 +111,7 @@ const Index = () => {
           <div className="mt-10 flex flex-col gap-4 justify-center max-w-lg mx-auto">
             {[
               { icon: Target, text: "+300 exercícios para melhorar sua escrita" },
-              { icon: Zap, text: "Acesso Imediato: Baixe, imprima e comece a praticar agora!" },
+              { icon: Zap, text: "Receba na hora pelo WhatsApp e comece a praticar agora!" },
               { icon: CheckCircle, text: "Método testado e aprovado" },
             ].map((item, i) => (
               <div key={i} className="bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-5 shadow-xl border border-primary/50 flex items-center gap-4 hover:scale-[1.02] transition-transform">
@@ -175,7 +175,7 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Mail, title: "Chega no seu e-mail em PDF", desc: "Todos os materiais são digitais. Logo após a compra é enviado para seu e-mail em PDF e você pode baixar quantas vezes quiser." },
+              { icon: Phone, title: "Chega no seu WhatsApp na hora", desc: "Logo após a compra, você recebe instantaneamente pelo WhatsApp os dados de acesso para baixar todos os materiais em PDF." },
               { icon: Printer, title: "Você imprime", desc: "O material contém mais de 300 páginas. Assim você pode imprimir quando e como desejar na sua casa!" },
               { icon: Clock, title: "Hora de treinar!", desc: "Agora sim! Treine 15 minutinhos por dia e veja resultados em até 3 dias." },
             ].map((step, i) => (
@@ -298,9 +298,9 @@ const Index = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold mb-8 text-center text-foreground">Saiba mais sobre nossas atividades</h2>
           <Accordion type="single" collapsible className="space-y-3">
             {[
-              { q: "Como vou receber o material de caligrafia?", a: "Logo após a confirmação do pagamento, você receberá o material completo em PDF no seu e-mail. Basta baixar e imprimir!" },
+              { q: "Como vou receber o material de caligrafia?", a: "Logo após a confirmação do pagamento, você recebe instantaneamente pelo WhatsApp os dados de acesso para baixar todos os materiais em PDF!" },
               { q: "O método é para adultos ou crianças?", a: "O Método Caligrafia Fácil funciona para ambos! Temos exercícios específicos tanto para adultos quanto para crianças em fase de alfabetização." },
-              { q: "O material é digital (PDF) ou é impresso?", a: "O material é 100% digital em formato PDF. Você recebe no e-mail e pode imprimir quantas vezes quiser!" },
+              { q: "O material é digital (PDF) ou é impresso?", a: "O material é 100% digital em formato PDF. Você recebe pelo WhatsApp na hora e pode imprimir quantas vezes quiser!" },
             ].map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="bg-card rounded-xl px-6 shadow-md border-none">
                 <AccordionTrigger className="text-foreground font-bold text-left hover:no-underline">{faq.q}</AccordionTrigger>
