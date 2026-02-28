@@ -4,16 +4,15 @@ interface ExerciseCarouselProps {
 
 const ExerciseCarousel = ({ images }: ExerciseCarouselProps) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+    <div className="flex flex-col gap-6 max-w-md md:max-w-lg mx-auto">
       {images.map((img, i) => (
-        <div key={i} className="rounded-2xl overflow-hidden shadow-lg bg-card">
+        <div key={i} className="rounded-2xl overflow-hidden shadow-lg">
           <img
             src={img.src}
-            alt={img.title}
+            alt={`Atividade ${i + 1}`}
             className="w-full object-contain"
             loading="lazy"
           />
-          <p className="text-sm font-bold text-foreground py-2 px-3 text-center">{img.title}</p>
         </div>
       ))}
     </div>
