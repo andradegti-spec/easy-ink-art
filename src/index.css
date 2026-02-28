@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,32 +7,32 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 40 10% 92%;
+    --foreground: 220 20% 18%;
 
-    --card: 40 5% 12%;
-    --card-foreground: 40 10% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 18%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 40 10% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 18%;
 
-    --primary: 43 85% 55%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 174 62% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 43 70% 45%;
+    --secondary: 36 100% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 5% 18%;
-    --muted-foreground: 40 10% 65%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 43 85% 55%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 340 82% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 8% 22%;
-    --input: 40 8% 22%;
-    --ring: 43 85% 55%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 62% 47%;
 
     --radius: 0.75rem;
 
@@ -45,6 +45,36 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
 @layer base {
@@ -53,40 +83,20 @@
   }
 
   body {
-    background-color: hsl(0, 0%, 6%);
-    color: hsl(40, 10%, 92%);
+    @apply bg-background text-foreground;
     font-family: 'Nunito', sans-serif;
   }
 
   h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Baloo 2', cursive;
   }
 }
 
 @layer utilities {
+  /* Hero - Preto e Dourado */
   .section-hero {
     background: linear-gradient(160deg, hsl(0, 0%, 8%) 0%, hsl(40, 10%, 10%) 50%, hsl(0, 0%, 6%) 100%);
-    border-bottom: 1px solid hsl(43, 50%, 30%);
-  }
-
-  .section-dark {
-    background-color: hsl(0, 0%, 4%);
-    border-bottom: 1px solid hsl(43, 30%, 18%);
-  }
-
-  .section-alt {
-    background: linear-gradient(180deg, hsl(40, 8%, 9%) 0%, hsl(0, 0%, 6%) 100%);
-    border-bottom: 1px solid hsl(43, 30%, 18%);
-  }
-
-  .section-gold {
-    background: linear-gradient(160deg, hsl(43, 40%, 10%) 0%, hsl(0, 0%, 6%) 100%);
-    border-bottom: 1px solid hsl(43, 50%, 30%);
-  }
-
-  .section-accent {
-    background: linear-gradient(135deg, hsl(43, 85%, 55%) 0%, hsl(38, 90%, 45%) 100%);
-    color: hsl(0, 0%, 5%);
+    color: hsl(0, 0%, 95%);
   }
 
   .gold-text {
@@ -96,21 +106,58 @@
     background-clip: text;
   }
 
+  .gold-border {
+    border: 1px solid hsl(43, 50%, 30%);
+  }
+
+  /* Demais seções - cores originais */
+  .section-light {
+    background-color: hsl(45, 100%, 97%);
+  }
+
+  .section-teal {
+    background-color: hsl(174, 40%, 95%);
+  }
+
+  .section-orange {
+    background-color: hsl(28, 100%, 96%);
+  }
+
+  .section-dark {
+    background-color: hsl(220, 20%, 14%);
+    color: hsl(0, 0%, 95%);
+  }
+
+  .section-coral {
+    background: linear-gradient(135deg, hsl(340, 82%, 55%), hsl(350, 80%, 48%));
+    color: hsl(0, 0%, 100%);
+  }
+
+  .section-green {
+    background-color: hsl(160, 50%, 95%);
+  }
+
+  .section-purple {
+    background-color: hsl(260, 40%, 96%);
+  }
+
   .cta-button {
+    background: linear-gradient(135deg, hsl(36, 100%, 55%), hsl(28, 100%, 48%));
+    color: hsl(0, 0%, 100%);
+    @apply font-extrabold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .cta-button-green {
+    background: linear-gradient(135deg, hsl(145, 65%, 42%), hsl(145, 65%, 35%));
+    color: hsl(0, 0%, 100%);
+    @apply font-extrabold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .cta-button-gold {
     background: linear-gradient(135deg, hsl(43, 85%, 55%), hsl(38, 90%, 45%));
     color: hsl(0, 0%, 5%);
     @apply font-extrabold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300;
     box-shadow: 0 0 30px hsla(43, 85%, 55%, 0.3);
-  }
-
-  .cta-button:hover {
-    box-shadow: 0 0 50px hsla(43, 85%, 55%, 0.5);
-  }
-
-  .cta-button-outline {
-    border: 2px solid hsl(43, 85%, 55%);
-    color: hsl(43, 85%, 55%);
-    @apply font-extrabold text-lg md:text-xl px-8 py-4 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300;
   }
 
   .price-tag {
@@ -119,16 +166,8 @@
   }
 
   .badge-hot {
-    background: linear-gradient(135deg, hsl(43, 85%, 55%), hsl(38, 90%, 45%));
-    color: hsl(0, 0%, 5%);
-    @apply px-4 py-1.5 rounded-full text-sm font-extrabold;
-  }
-
-  .gold-border {
-    border: 1px solid hsl(43, 50%, 30%);
-  }
-
-  .gold-glow {
-    box-shadow: 0 0 30px hsla(43, 85%, 55%, 0.15);
+    background-color: hsl(0, 84%, 55%);
+    color: hsl(0, 0%, 100%);
+    @apply px-3 py-1 rounded-full text-sm font-bold;
   }
 }

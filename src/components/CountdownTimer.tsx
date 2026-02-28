@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const CountdownTimer = () => {
+const CountdownTimer = ({ variant = "default" }: { variant?: "gold" | "default" }) => {
   const [timeLeft, setTimeLeft] = useState(() => {
     const saved = localStorage.getItem("caligrafia-countdown-end");
     if (saved) {
@@ -28,14 +28,17 @@ const CountdownTimer = () => {
   const seconds = timeLeft % 60;
   const pad = (n: number) => n.toString().padStart(2, "0");
 
+  const isGold = variant === "gold";
+
   return (
     <div className="flex items-center justify-center gap-2">
       {[pad(hours), pad(minutes), pad(seconds)].map((val, i) => (
         <div key={i} className="flex items-center gap-2">
-          <div className="gold-border rounded-lg px-3 py-2 min-w-[3rem] text-center" style={{ background: 'hsla(43, 50%, 30%, 0.2)' }}>
-            <span className="text-3xl md:text-5xl font-extrabold gold-text">{val}</span>
+          <div className={`rounded-lg px-3 py-2 min-w-[3rem] text-center ${isGold ? "gold-border" : "bg-foreground/10 backdrop-blur-sm"}`}
+            style={isGold ? { background: 'hsla(43, 50%, 30%, 0.2)' } : undefined}>
+            <span className={`text-3xl md:text-5xl font-extrabold ${isGold ? "gold-text" : ""}`}>{val}</span>
           </div>
-          {i < 2 && <span className="text-3xl md:text-5xl font-bold gold-text">:</span>}
+          {i < 2 && <span className={`text-3xl md:text-5xl font-bold ${isGold ? "gold-text" : ""}`}>:</span>}
         </div>
       ))}
     </div>
