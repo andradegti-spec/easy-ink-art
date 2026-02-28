@@ -69,11 +69,15 @@ const Index = () => {
               <img src={depoisImg} alt="Caligrafia depois do método" className="rounded-xl shadow-lg w-full object-cover max-h-80" />
             </div>
           </div>
-          <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center max-w-xl mx-auto">
-            {["+300 exercícios para melhorar sua escrita", "Acesso Imediato: Baixe, imprima e comece a praticar agora!", "Método testado e aprovado"].map((text, i) => (
-              <div key={i} className="bg-card rounded-xl p-4 shadow-md flex items-start gap-3 flex-1">
-                <span className="text-primary font-bold text-xl">✓</span>
-                <span className="text-sm font-semibold text-foreground">{text}</span>
+          <div className="mt-10 flex flex-col gap-4 justify-center max-w-lg mx-auto">
+            {[
+              { icon: "🎯", text: "+300 exercícios para melhorar sua escrita" },
+              { icon: "⚡", text: "Acesso Imediato: Baixe, imprima e comece a praticar agora!" },
+              { icon: "✅", text: "Método testado e aprovado" },
+            ].map((item, i) => (
+              <div key={i} className="bg-card rounded-2xl px-6 py-5 shadow-xl border-l-4 border-primary flex items-center gap-4 hover:scale-[1.02] transition-transform">
+                <span className="text-3xl">{item.icon}</span>
+                <span className="text-base md:text-lg font-extrabold text-foreground">{item.text}</span>
               </div>
             ))}
           </div>
