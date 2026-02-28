@@ -32,6 +32,8 @@ import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.png";
 import avatar5 from "@/assets/avatar-5.png";
 import logoClubeImg from "@/assets/logo-clube.png";
+import bonus1Img from "@/assets/bonus-1.webp";
+import bonus2Img from "@/assets/bonus-2.webp";
 
 const Index = () => {
   const [showUpsell, setShowUpsell] = useState(false);
@@ -228,12 +230,14 @@ const Index = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">E você ainda ganha</h2>
           <p className="text-3xl md:text-5xl font-extrabold text-accent mb-10">+2 Bônus Exclusivos!</p>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-2xl p-8 shadow-lg text-left">
+            <div className="bg-card rounded-2xl p-8 shadow-lg text-center">
+              <img src={bonus1Img} alt="Bônus Dicas e Técnicas" className="w-48 mx-auto mb-4 drop-shadow-lg" />
               <span className="text-primary font-extrabold text-sm">#Bônus 1</span>
               <h3 className="text-xl font-extrabold mt-1 mb-3 text-foreground">Dicas e Técnicas</h3>
               <p className="text-muted-foreground">Ebook completo com dicas e técnicas para melhorar sua caligrafia, sugestão de materiais e plano de treino diário.</p>
             </div>
-            <div className="bg-card rounded-2xl p-8 shadow-lg text-left">
+            <div className="bg-card rounded-2xl p-8 shadow-lg text-center">
+              <img src={bonus2Img} alt="Bônus Teste de Disgrafia" className="w-48 mx-auto mb-4 drop-shadow-lg" />
               <span className="text-primary font-extrabold text-sm">#Bônus 2</span>
               <h3 className="text-xl font-extrabold mt-1 mb-3 text-foreground">Teste e diagnóstico de Disgrafia</h3>
               <p className="text-muted-foreground">Faça uma autoavaliação para identificar se você tem disgrafia, tipo e nível da dificuldade na escrita.</p>
