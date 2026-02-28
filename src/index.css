@@ -1,88 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 20% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 20% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 174 62% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 36 100% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 340 82% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 62% 47%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Section backgrounds */
+    --section-hero: 174 62% 47%;
+    --section-hero-foreground: 0 0% 100%;
+    --section-light: 45 100% 97%;
+    --section-teal: 174 40% 95%;
+    --section-orange: 28 100% 96%;
+    --section-dark: 220 20% 14%;
+    --section-dark-foreground: 0 0% 100%;
+    --section-coral: 340 82% 55%;
+    --section-coral-foreground: 0 0% 100%;
+    --section-green: 160 50% 95%;
+    --section-purple: 260 40% 96%;
+
+    /* Custom */
+    --cta-gradient-from: 36 100% 55%;
+    --cta-gradient-to: 28 100% 48%;
+    --price-old: 0 70% 50%;
+    --badge-hot: 0 84% 55%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 220 20% 14%;
+    --foreground: 0 0% 95%;
+    --card: 220 18% 18%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 18% 18%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 174 62% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 36 100% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 15% 22%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 340 82% 55%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 174 62% 47%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +103,70 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Baloo 2', cursive;
+  }
+}
+
+@layer utilities {
+  .section-hero {
+    background: linear-gradient(135deg, hsl(174, 62%, 47%), hsl(174, 62%, 38%));
+    color: hsl(var(--section-hero-foreground));
+  }
+
+  .section-light {
+    background-color: hsl(var(--section-light));
+  }
+
+  .section-teal {
+    background-color: hsl(var(--section-teal));
+  }
+
+  .section-orange {
+    background-color: hsl(var(--section-orange));
+  }
+
+  .section-dark {
+    background-color: hsl(var(--section-dark));
+    color: hsl(var(--section-dark-foreground));
+  }
+
+  .section-coral {
+    background: linear-gradient(135deg, hsl(340, 82%, 55%), hsl(350, 80%, 48%));
+    color: hsl(var(--section-coral-foreground));
+  }
+
+  .section-green {
+    background-color: hsl(var(--section-green));
+  }
+
+  .section-purple {
+    background-color: hsl(var(--section-purple));
+  }
+
+  .cta-button {
+    background: linear-gradient(135deg, hsl(var(--cta-gradient-from)), hsl(var(--cta-gradient-to)));
+    color: hsl(0, 0%, 100%);
+    @apply font-extrabold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .cta-button-green {
+    background: linear-gradient(135deg, hsl(145, 65%, 42%), hsl(145, 65%, 35%));
+    color: hsl(0, 0%, 100%);
+    @apply font-extrabold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .price-tag {
+    color: hsl(var(--price-old));
+    @apply line-through text-lg;
+  }
+
+  .badge-hot {
+    background-color: hsl(var(--badge-hot));
+    color: hsl(0, 0%, 100%);
+    @apply px-3 py-1 rounded-full text-sm font-bold;
   }
 }
