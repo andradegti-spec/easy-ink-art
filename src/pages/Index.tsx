@@ -336,27 +336,27 @@ const Index = () => {
             </div>
 
             {/* Material Principal */}
-            <div className="mb-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(174,62%,60%)] mb-2">📘 Material Principal</p>
-              <ul className="space-y-2">
+            <div className="mb-5 bg-[hsl(174,62%,47%)]/10 border border-[hsl(174,62%,47%)]/30 rounded-xl p-5">
+              <p className="text-sm md:text-base font-extrabold uppercase tracking-widest text-[hsl(174,62%,60%)] mb-3">📘 MATERIAL PRINCIPAL</p>
+              <ul className="space-y-3">
                 {[
                   "Combo +300 exercícios de caligrafia em PDF",
                   "Módulo de coordenação motora",
                   "Módulo de alfabeto cursivo completo",
                   "Módulo de lettering",
                 ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <Check className="w-5 h-5 mt-0.5 text-[hsl(174,62%,60%)] flex-shrink-0" />
-                    <span className="text-sm md:text-base">{f}</span>
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="w-6 h-6 mt-0.5 text-[hsl(174,62%,60%)] flex-shrink-0" />
+                    <span className="text-base md:text-lg font-bold">{f}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Conteúdo Extra */}
-            <div className="mb-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(36,100%,55%)] mb-2">⭐ Conteúdo Extra</p>
-              <ul className="space-y-2">
+            <div className="mb-5 bg-[hsl(36,100%,55%)]/10 border border-[hsl(36,100%,55%)]/30 rounded-xl p-5">
+              <p className="text-sm md:text-base font-extrabold uppercase tracking-widest text-[hsl(36,100%,55%)] mb-3">⭐ CONTEÚDO EXTRA</p>
+              <ul className="space-y-3">
                 {[
                   "+250 exercícios bônus extras",
                   "Mega pack atividades infantis (+350 pág.)",
@@ -365,42 +365,42 @@ const Index = () => {
                   "Alfabeto letra itálico",
                   "Alfabeto letra medieval",
                 ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <Check className="w-5 h-5 mt-0.5 text-[hsl(36,100%,55%)] flex-shrink-0" />
-                    <span className="text-sm md:text-base">{f}</span>
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="w-6 h-6 mt-0.5 text-[hsl(36,100%,55%)] flex-shrink-0" />
+                    <span className="text-base md:text-lg font-bold">{f}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Bônus */}
-            <div className="mb-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(270,60%,65%)] mb-2">🎁 Bônus Inclusos</p>
-              <ul className="space-y-2">
+            <div className="mb-5 bg-[hsl(270,60%,55%)]/10 border border-[hsl(270,60%,55%)]/30 rounded-xl p-5">
+              <p className="text-sm md:text-base font-extrabold uppercase tracking-widest text-[hsl(270,60%,65%)] mb-3">🎁 BÔNUS INCLUSOS</p>
+              <ul className="space-y-3">
                 {[
                   "Guia de Dicas e Técnicas",
                   "Teste de Disgrafia",
                 ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <Check className="w-5 h-5 mt-0.5 text-[hsl(270,60%,65%)] flex-shrink-0" />
-                    <span className="text-sm md:text-base">{f}</span>
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="w-6 h-6 mt-0.5 text-[hsl(270,60%,65%)] flex-shrink-0" />
+                    <span className="text-base md:text-lg font-bold">{f}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Garantias */}
-            <div className="mb-8">
-              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(145,65%,55%)] mb-2">✅ Garantias</p>
-              <ul className="space-y-2">
+            <div className="mb-8 bg-[hsl(145,65%,42%)]/10 border border-[hsl(145,65%,42%)]/30 rounded-xl p-5">
+              <p className="text-sm md:text-base font-extrabold uppercase tracking-widest text-[hsl(145,65%,55%)] mb-3">✅ GARANTIAS</p>
+              <ul className="space-y-3">
                 {[
                   "Acesso vitalício + atualizações",
                   "Entrega imediata via WhatsApp",
                   "Garantia incondicional de 7 dias",
                 ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <Check className="w-5 h-5 mt-0.5 text-[hsl(145,65%,55%)] flex-shrink-0" />
-                    <span className="text-sm md:text-base">{f}</span>
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="w-6 h-6 mt-0.5 text-[hsl(145,65%,55%)] flex-shrink-0" />
+                    <span className="text-base md:text-lg font-bold">{f}</span>
                   </li>
                 ))}
               </ul>
