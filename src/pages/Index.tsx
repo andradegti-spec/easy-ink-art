@@ -323,30 +323,76 @@ const Index = () => {
               <h3 className="text-2xl font-extrabold">Kit Completo da Caligrafia</h3>
             </div>
 
-            <ul className="space-y-2.5 mb-8">
-              {[
-                "Combo +300 exercícios de caligrafia em PDF",
-                "Módulo de coordenação motora",
-                "Módulo de alfabeto cursivo completo",
-                "Módulo de lettering",
-                "+250 exercícios bônus extras",
-                "Mega pack atividades infantis (+350 pág.)",
-                "Apostila de reforço para crianças",
-                "Alfabeto letra de forma",
-                "Alfabeto letra itálico",
-                "Alfabeto letra medieval",
-                "Guia de Dicas e Técnicas (Bônus)",
-                "Teste de Disgrafia (Bônus)",
-                "Acesso vitalício + atualizações",
-                "Entrega imediata via WhatsApp",
-                "Garantia incondicional de 7 dias",
-              ].map((f, i) => (
-                <li key={i} className="flex items-start gap-2.5">
-                  <Check className="w-5 h-5 mt-0.5 text-[hsl(145,65%,50%)] flex-shrink-0" />
-                  <span className="text-sm md:text-base">{f}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Material Principal */}
+            <div className="mb-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(174,62%,60%)] mb-2">📘 Material Principal</p>
+              <ul className="space-y-2">
+                {[
+                  "Combo +300 exercícios de caligrafia em PDF",
+                  "Módulo de coordenação motora",
+                  "Módulo de alfabeto cursivo completo",
+                  "Módulo de lettering",
+                ].map((f, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <Check className="w-5 h-5 mt-0.5 text-[hsl(174,62%,60%)] flex-shrink-0" />
+                    <span className="text-sm md:text-base">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Conteúdo Extra */}
+            <div className="mb-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(36,100%,55%)] mb-2">⭐ Conteúdo Extra</p>
+              <ul className="space-y-2">
+                {[
+                  "+250 exercícios bônus extras",
+                  "Mega pack atividades infantis (+350 pág.)",
+                  "Apostila de reforço para crianças",
+                  "Alfabeto letra de forma",
+                  "Alfabeto letra itálico",
+                  "Alfabeto letra medieval",
+                ].map((f, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <Check className="w-5 h-5 mt-0.5 text-[hsl(36,100%,55%)] flex-shrink-0" />
+                    <span className="text-sm md:text-base">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Bônus */}
+            <div className="mb-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(270,60%,65%)] mb-2">🎁 Bônus Inclusos</p>
+              <ul className="space-y-2">
+                {[
+                  "Guia de Dicas e Técnicas",
+                  "Teste de Disgrafia",
+                ].map((f, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <Check className="w-5 h-5 mt-0.5 text-[hsl(270,60%,65%)] flex-shrink-0" />
+                    <span className="text-sm md:text-base">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Garantias */}
+            <div className="mb-8">
+              <p className="text-xs font-bold uppercase tracking-widest text-[hsl(145,65%,55%)] mb-2">✅ Garantias</p>
+              <ul className="space-y-2">
+                {[
+                  "Acesso vitalício + atualizações",
+                  "Entrega imediata via WhatsApp",
+                  "Garantia incondicional de 7 dias",
+                ].map((f, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <Check className="w-5 h-5 mt-0.5 text-[hsl(145,65%,55%)] flex-shrink-0" />
+                    <span className="text-sm md:text-base">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div className="text-center">
               <p className="text-[hsl(0,60%,60%)] line-through text-lg mb-1">De R$ 97,00</p>
