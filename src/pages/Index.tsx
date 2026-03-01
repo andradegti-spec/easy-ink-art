@@ -141,10 +141,10 @@ const Index = () => {
       <section className="bg-gradient-to-br from-[hsl(36,60%,95%)] to-[hsl(36,80%,90%)] py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">
-            21 dias é o que separa você de uma letra bonita
+            21 dias. 15 minutos por dia. +300 exercícios práticos.
           </h2>
-          <p className="text-muted-foreground mb-10 text-lg">
-            Resultados reais de quem praticou <strong className="text-foreground">apenas 15 minutos por dia</strong> com nossos exercícios. A transformação começa na primeira semana.
+          <p className="text-muted-foreground mb-10 text-lg md:text-xl">
+            O suficiente para <strong className="text-foreground">transformar sua caligrafia.</strong>
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
