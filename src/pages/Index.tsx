@@ -118,13 +118,13 @@ const Index = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: FileText, title: "100% em PDF", desc: "Arquivos prontos para baixar e imprimir. Use em casa, na escola ou onde preferir." },
-              { icon: Printer, title: "Imprima quantas vezes quiser", desc: "O material é seu para sempre. Reimprima sempre que precisar, sem custo adicional." },
-              { icon: RefreshCw, title: "Treino progressivo", desc: "Exercícios organizados do básico ao avançado. Você evolui no seu próprio ritmo." },
+              { icon: FileText, title: "100% em PDF", desc: "Arquivos prontos para baixar e imprimir. Use em casa, na escola ou onde preferir.", color: "bg-[hsl(174,62%,47%)]" },
+              { icon: Printer, title: "Imprima quantas vezes quiser", desc: "O material é seu para sempre. Reimprima sempre que precisar, sem custo adicional.", color: "bg-[hsl(36,100%,55%)]" },
+              { icon: RefreshCw, title: "Treino progressivo", desc: "Exercícios organizados do básico ao avançado. Você evolui no seu próprio ritmo.", color: "bg-[hsl(340,82%,55%)]" },
             ].map((item, i) => (
               <div key={i} className="bg-card rounded-2xl p-6 shadow-lg text-center">
-                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-primary-foreground" />
+                <div className={`w-16 h-16 rounded-full ${item.color} flex items-center justify-center mx-auto mb-4`}>
+                  <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-extrabold mb-2 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
