@@ -74,9 +74,10 @@ const Index = () => {
       {/* ===== VÍDEO ===== */}
       <section className="bg-[hsl(220,25%,12%)] py-14 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-white">
-            Assista e veja como funciona
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-white">
+            Veja o que estão falando sobre o material
           </h2>
+          <p className="text-white/70 text-base mb-6">+8.500 pessoas já transformaram sua escrita com esse kit</p>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <div className="wistia_responsive_padding" style={{ padding: "56.25% 0 0 0", position: "relative" }}>
               <div className="wistia_responsive_wrapper" style={{ height: "100%", left: 0, position: "absolute", top: 0, width: "100%" }}>
