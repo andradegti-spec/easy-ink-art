@@ -92,28 +92,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ===== DOR DO PÚBLICO ===== */}
-      <section className="bg-gradient-to-br from-[hsl(340,60%,45%)] to-[hsl(340,70%,35%)] py-16 px-4 text-white">
+      {/* ===== DOR RESUMIDA ===== */}
+      <section className="bg-gradient-to-br from-[hsl(340,60%,45%)] to-[hsl(340,70%,35%)] py-10 px-4 text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-8">
-            Você se identifica com alguma dessas situações?
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-3">
+            Sua letra te incomoda? Você não está sozinho.
           </h2>
-          <div className="flex flex-col gap-4 max-w-lg mx-auto text-left">
-            {[
-              "Tem vergonha da própria letra e evita escrever em público",
-              "As pessoas não entendem o que você escreve",
-              "Sente cansaço e desconforto na mão ao escrever por mais tempo",
-              "Seu filho tem dificuldade com a coordenação motora para a escrita",
-              "Já tentou melhorar, mas nunca teve um material organizado para treinar",
-            ].map((dor, i) => (
-              <div key={i} className="bg-white/15 backdrop-blur-sm rounded-xl px-5 py-4 flex items-start gap-3">
-                <span className="text-[hsl(36,100%,55%)] text-xl flex-shrink-0">✗</span>
-                <span className="text-base md:text-lg font-semibold">{dor}</span>
-              </div>
-            ))}
-          </div>
-          <p className="mt-10 text-xl md:text-2xl font-extrabold opacity-95">
-            Se disse "sim" para qualquer uma delas, esse material foi feito para você.
+          <p className="text-base md:text-lg opacity-90 max-w-xl mx-auto">
+            Milhares de pessoas sentem vergonha ao escrever, têm dificuldade de leitura da própria letra ou nunca encontraram um material organizado para treinar. <strong>Esse kit resolve isso.</strong>
           </p>
         </div>
       </section>
