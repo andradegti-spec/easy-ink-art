@@ -141,7 +141,7 @@ const Index = () => {
       <section className="bg-gradient-to-br from-[hsl(36,60%,95%)] to-[hsl(36,80%,90%)] py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-2 text-foreground">
-            21 dias. 15 minutos por dia. <span className="text-[hsl(174,62%,47%)]">+300 exercícios práticos.</span>
+            Melhore sua letra em até <span className="text-[hsl(174,62%,47%)]">21 dias</span> de prática
           </h2>
           <p className="text-muted-foreground mb-10 text-lg md:text-xl">
             O suficiente para <strong className="text-foreground">transformar sua caligrafia.</strong>
