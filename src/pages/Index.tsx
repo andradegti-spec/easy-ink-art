@@ -221,22 +221,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ===== AMOSTRAS ===== */}
-      <section className="bg-[hsl(270,20%,96%)] py-16 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-foreground">Veja algumas páginas do material:</h2>
-          <p className="text-muted-foreground mb-10 text-lg">
-            Exercícios claros, organizados e prontos para imprimir.
-          </p>
-          <ExerciseCarousel
-            images={[
-              { src: exercicio1, title: "" },
-              { src: exercicio2, title: "" },
-              { src: exercicio3, title: "" },
-            ]}
-          />
-        </div>
-      </section>
 
       {/* ===== QUEM CRIOU ===== */}
       <section className="bg-gradient-to-br from-[hsl(174,40%,92%)] to-[hsl(174,50%,85%)] py-16 px-4">
