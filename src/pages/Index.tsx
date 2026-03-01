@@ -168,13 +168,13 @@ const Index = () => {
           <p className="text-lg mb-10 opacity-80">Mais de <strong>300 páginas</strong> de exercícios organizados por módulo:</p>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto text-left">
             {[
-              { icon: PenTool, title: "Coordenação motora", desc: "Exercícios para soltar a mão e ganhar controle no traço." },
-              { icon: Target, title: "Alfabeto cursivo completo", desc: "Letras maiúsculas e minúsculas com guias de repetição." },
-              { icon: Brain, title: "Módulo de lettering", desc: "Atividades criativas para explorar diferentes estilos de letra." },
-              { icon: Users, title: "Atividades para crianças", desc: "Exercícios adaptados para a fase de alfabetização infantil." },
+              { icon: PenTool, title: "Coordenação motora", desc: "Exercícios para soltar a mão e ganhar controle no traço.", color: "bg-[hsl(174,62%,47%)]" },
+              { icon: Target, title: "Alfabeto cursivo completo", desc: "Letras maiúsculas e minúsculas com guias de repetição.", color: "bg-[hsl(36,100%,55%)]" },
+              { icon: Brain, title: "Módulo de lettering", desc: "Atividades criativas para explorar diferentes estilos de letra.", color: "bg-[hsl(270,60%,55%)]" },
+              { icon: Users, title: "Atividades para crianças", desc: "Exercícios adaptados para a fase de alfabetização infantil.", color: "bg-[hsl(340,82%,55%)]" },
             ].map((mod, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-5 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[hsl(174,62%,47%)] flex items-center justify-center flex-shrink-0">
+                <div className={`w-12 h-12 rounded-full ${mod.color} flex items-center justify-center flex-shrink-0`}>
                   <mod.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
