@@ -101,6 +101,9 @@ const Index = () => {
           <p className="text-base md:text-lg opacity-90 max-w-xl mx-auto">
             Milhares de pessoas sentem vergonha ao escrever, têm dificuldade de leitura da própria letra ou nunca encontraram um material organizado para treinar. <strong>Esse kit resolve isso.</strong>
           </p>
+          <a href="#pricing" className="cta-button-gold inline-block mt-6 animate-pulse-scale text-base px-6 py-3">
+            QUERO MELHORAR MINHA LETRA
+          </a>
         </div>
       </section>
 
@@ -156,6 +159,9 @@ const Index = () => {
           <p className="mt-6 text-sm text-muted-foreground italic">
             *Resultados variam de pessoa para pessoa e dependem da prática constante.
           </p>
+          <a href="#pricing" className="cta-button-green inline-block mt-4 animate-pulse-scale text-base px-6 py-3">
+            QUERO ESSE RESULTADO
+          </a>
         </div>
       </section>
 
@@ -209,6 +215,9 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <a href="#pricing" className="cta-button-green inline-block mt-10 animate-pulse-scale text-base px-6 py-3">
+            COMEÇAR AGORA
+          </a>
         </div>
       </section>
 
@@ -294,6 +303,9 @@ const Index = () => {
               />
             ))}
           </div>
+          <a href="#pricing" className="cta-button-gold inline-block mt-8 animate-pulse-scale text-base px-6 py-3">
+            QUERO MEU MATERIAL AGORA
+          </a>
         </div>
       </section>
 
