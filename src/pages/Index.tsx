@@ -325,14 +325,14 @@ const Index = () => {
       {/* ===== OFERTA ÚNICA ===== */}
       <section id="pricing" className="bg-gradient-to-b from-[hsl(220,25%,12%)] to-[hsl(220,30%,8%)] py-16 px-4 text-white">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-2">Tudo isso por um preço especial</h2>
-          <p className="text-sm font-bold uppercase tracking-widest text-[hsl(36,100%,55%)] mb-2">⏰ Oferta por tempo limitado:</p>
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-2">Tudo isso por um preço especial</h2>
+          <p className="text-base font-bold uppercase tracking-widest text-[hsl(36,100%,55%)] mb-2">⏰ Oferta por tempo limitado:</p>
           <CountdownTimer />
 
           <div className="bg-white/10 backdrop-blur-sm border-2 border-[hsl(36,100%,55%)] rounded-2xl p-8 mt-10 text-left">
             <div className="text-center mb-6">
-              <Sparkles className="w-8 h-8 text-[hsl(36,100%,55%)] mx-auto mb-2" />
-              <h3 className="text-2xl font-extrabold">Kit Completo da Caligrafia</h3>
+              <Sparkles className="w-10 h-10 text-[hsl(36,100%,55%)] mx-auto mb-2" />
+              <h3 className="text-3xl md:text-4xl font-extrabold">Kit Completo da Caligrafia</h3>
             </div>
 
             {/* Material Principal */}
@@ -407,10 +407,10 @@ const Index = () => {
             </div>
 
             <div className="text-center">
-              <p className="text-[hsl(0,60%,60%)] line-through text-lg mb-1">De R$ 97,00</p>
-              <p className="text-sm opacity-80 mb-1">POR APENAS</p>
-              <p className="text-5xl md:text-6xl font-extrabold text-[hsl(36,100%,55%)] mb-1">R$ 19,90</p>
-              <p className="text-xs font-bold text-[hsl(145,65%,55%)] uppercase tracking-wide mb-6">⚡ Economia de mais de 79%</p>
+              <p className="text-[hsl(0,60%,60%)] line-through text-xl mb-1">De R$ 97,00</p>
+              <p className="text-base opacity-80 mb-1">POR APENAS</p>
+              <p className="text-6xl md:text-7xl font-extrabold text-[hsl(36,100%,55%)] mb-1">R$ 19,90</p>
+              <p className="text-sm font-bold text-[hsl(145,65%,55%)] uppercase tracking-wide mb-6">⚡ Economia de mais de 79%</p>
 
               <a
                 href="https://pay.lowify.com.br/checkout?product_id=Dh2LP2"
