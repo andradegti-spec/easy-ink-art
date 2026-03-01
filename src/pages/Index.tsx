@@ -283,7 +283,7 @@ const Index = () => {
             <img src={compradoresImg} alt="Pessoas que adquiriram o material" className="max-w-xs md:max-w-sm" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[provaSocial1, provaSocial2, provaSocial3, provaSocial4].map((img, i) => (
               <img
                 key={i}
