@@ -195,14 +195,14 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: MessageCircle, step: "1", title: "Compre pelo site", desc: "Pagamento rápido e seguro via Pix ou cartão." },
-              { icon: Phone, step: "2", title: "Receba no WhatsApp", desc: "Na hora, você recebe o link para baixar todos os PDFs." },
-              { icon: Printer, step: "3", title: "Imprima em casa", desc: "Imprima as páginas que quiser, quantas vezes precisar." },
-              { icon: Clock, step: "4", title: "Pratique 15min/dia", desc: "Siga os exercícios no seu ritmo e veja sua letra melhorar." },
+              { icon: MessageCircle, step: "1", title: "Compre pelo site", desc: "Pagamento rápido e seguro via Pix ou cartão.", color: "bg-[hsl(174,62%,47%)]" },
+              { icon: Phone, step: "2", title: "Receba no WhatsApp", desc: "Na hora, você recebe o link para baixar todos os PDFs.", color: "bg-[hsl(145,65%,42%)]" },
+              { icon: Printer, step: "3", title: "Imprima em casa", desc: "Imprima as páginas que quiser, quantas vezes precisar.", color: "bg-[hsl(36,100%,55%)]" },
+              { icon: Clock, step: "4", title: "Pratique 15min/dia", desc: "Siga os exercícios no seu ritmo e veja sua letra melhorar.", color: "bg-[hsl(340,82%,55%)]" },
             ].map((step, i) => (
               <div key={i} className="bg-card rounded-2xl p-5 shadow-lg text-center">
-                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mx-auto mb-3">
-                  <span className="text-secondary-foreground font-extrabold text-lg">{step.step}</span>
+                <div className={`w-12 h-12 rounded-full ${step.color} flex items-center justify-center mx-auto mb-3`}>
+                  <span className="text-white font-extrabold text-lg">{step.step}</span>
                 </div>
                 <h3 className="text-lg font-extrabold mb-2 text-foreground">{step.title}</h3>
                 <p className="text-muted-foreground text-sm">{step.desc}</p>
